@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Top 5 Hot Leads">
+        <template if:true={leads}>
+            <ul>
+                <template for:each={leads} for:item="lead">
+                    <li key={lead.Id}>{lead.Name}</li>
+                </template>
+            </ul>
+        </template>
+        <template if:false={leads}>
+            <p>No hot leads found.</p>
+        </template>
+    </lightning-card>
+</template>
